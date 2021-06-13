@@ -21,6 +21,12 @@ public class PassengerTest {
     }
 
     @Test
+    public void passengerCanSetNoOfBags(){
+        passenger.setNoOfBags(1);
+        assertEquals(1, passenger.getNoOfBags());
+    }
+
+    @Test
     public void passengerHasNoOfBags(){
         assertEquals(2, passenger.getNoOfBags());
     }
