@@ -7,6 +7,7 @@ import people.staff.Pilot;
 import people.staff.Rank;
 import people.staff.Staff;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Flight {
@@ -110,5 +111,8 @@ public class Flight {
 
     public int returnAvailableSeats() {
         return this.plane.getCapacityFromEnum() - this.countPassengers();
+    }
+    public ArrayList getPassengerList() {
+        return this.passengerList;
     }
 }

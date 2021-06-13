@@ -20,7 +20,7 @@ public class FlightManager extends Staff {
     }
 
     public int calculateBaggageWeightBooked(){
-        for (passenger in flight.passengerList.get()) {
+        for (passenger in; flight.getPassengerList()) {
 
         }
     }
