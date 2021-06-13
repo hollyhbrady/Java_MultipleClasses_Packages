@@ -4,6 +4,7 @@ public enum Rank {
 
     CAPTAIN,
     FIRSTOFFICER,
-    ATTENDANT
+    ATTENDANT,
+    FLIGHTMANAGER,
 
 }
