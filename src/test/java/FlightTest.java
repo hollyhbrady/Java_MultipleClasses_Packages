@@ -43,12 +43,12 @@ public class FlightTest {
 
     @Test
     public void flightHasPilot(){
-        assertEquals(this.pilot, flight.getCrewType());
+        assertEquals("Sebby", flight.getCrewName());
     }
 
     @Test
     public void flightHasPlane(){
-        assertEquals(this.plane, flight.getPlaneType());
+        assertEquals(PlaneType.BOEING737, flight.getPlaneType());
     }
 
     @Test
@@ -78,11 +78,17 @@ public class FlightTest {
 
     @Test
     public void flightCanAddPassengers(){
+        flight.addPassenger(Nezuko);
+        flight.addPassenger(Tanjiro);
         assertEquals(2, flight.countPassengers());
     }
 
     @Test
     public void flightHasCrewList(){
+        flight.addCrew(pilot);
+        flight.addCrew(attendant1);
+        flight.addCrew(attendant2);
+        flight.addCrew(firstOfficer);
         assertEquals(4, flight.countCrew());
     }
 }

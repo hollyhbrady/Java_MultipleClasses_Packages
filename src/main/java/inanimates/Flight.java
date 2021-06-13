@@ -11,13 +11,14 @@ import java.util.ArrayList;
 public class Flight {
 
     Pilot pilot;
-    private ArrayList<CabinCrew> cabinCrewList;
+    private ArrayList<Staff> cabinCrewList;
     private ArrayList<Passenger> passengerList;
     Plane plane;
     private String flightNo;
     private String destination;
     private String departureAirport;
     private String departureTime;
+    CabinCrew cabinCrew;
 
     public Flight (Pilot pilot, Plane plane, String flightNo, String destination, String departureAirport, String departureTime){
         this.pilot = pilot;
@@ -38,22 +39,6 @@ public class Flight {
     public void setPilot(Pilot pilot) {
         this.pilot = pilot;
     }
-
-//    public ArrayList<CabinCrew> getCabinCrewList() {
-//        return cabinCrewList;
-//    }
-//
-//    public void setCabinCrewList(ArrayList<CabinCrew> cabinCrewList) {
-//        this.cabinCrewList = cabinCrewList;
-//    }
-//
-//    public ArrayList<Passenger> getPassengerList() {
-//        return passengerList;
-//    }
-//
-//    public void setPassengerList(ArrayList<Passenger> passengerList) {
-//        this.passengerList = passengerList;
-//    }
 
     public Plane getPlane() {
         return plane;
@@ -103,11 +88,19 @@ public class Flight {
         return this.cabinCrewList.size();
     }
 
-    public String getCrewType() {
-        return this.pilot.getName();
+    public String getCrewName() {
+        return this.cabinCrew.getName();
     }
 
     public PlaneType getPlaneType() {
         return this.plane.getType();
+    }
+
+    public void addPassenger(Passenger passenger) {
+        this.passengerList.add(passenger);
+    }
+
+    public void addCrew(Staff staff) {
+        this.cabinCrewList.add(staff);
     }
 }
