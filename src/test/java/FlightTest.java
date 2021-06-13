@@ -27,9 +27,9 @@ public class FlightTest {
 
     @Before
     public void before(){
-        flight = new Flight(pilot, plane, "FG123", "AKL", "EDI", "20:00");
         pilot = new Pilot("Sebby", Rank.CAPTAIN, "GH1234");
         plane = new Plane(PlaneType.BOEING737);
+        flight = new Flight(pilot, plane, "FG123", "AKL", "EDI", "20:00");
         attendant1 = new CabinCrew("Izzy", Rank.ATTENDANT);
         attendant2 = new CabinCrew("Samuel", Rank.ATTENDANT);
         firstOfficer = new CabinCrew("Holly", Rank.FIRSTOFFICER);
@@ -43,7 +43,7 @@ public class FlightTest {
 
     @Test
     public void flightHasPilot(){
-        assertEquals("Sebby", flight.getCrewName());
+        assertEquals("Sebby", flight.getPilotName());
     }
 
     @Test

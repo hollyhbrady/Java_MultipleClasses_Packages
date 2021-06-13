@@ -1,5 +1,6 @@
 package inanimates;
 
+import people.Person;
 import people.passenger.Passenger;
 import people.staff.CabinCrew;
 import people.staff.Pilot;
@@ -10,15 +11,16 @@ import java.util.ArrayList;
 
 public class Flight {
 
-    Pilot pilot;
+    private Pilot pilot;
     private ArrayList<Staff> cabinCrewList;
     private ArrayList<Passenger> passengerList;
-    Plane plane;
+    private Plane plane;
     private String flightNo;
     private String destination;
     private String departureAirport;
     private String departureTime;
-    CabinCrew cabinCrew;
+    private CabinCrew cabinCrew;
+    private Person staff;
 
     public Flight (Pilot pilot, Plane plane, String flightNo, String destination, String departureAirport, String departureTime){
         this.pilot = pilot;
@@ -88,8 +90,8 @@ public class Flight {
         return this.cabinCrewList.size();
     }
 
-    public String getCrewName() {
-        return this.cabinCrew.getName();
+    public String getPilotName() {
+        return pilot.getName();
     }
 
     public PlaneType getPlaneType() {
