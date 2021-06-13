@@ -1,6 +1,6 @@
 import org.junit.Before;
 import org.junit.Test;
-import people.Passenger.Passenger;
+import people.passenger.Passenger;
 import people.Person;
 
 import static org.junit.Assert.assertEquals;

@@ -1,4 +1,4 @@
-package people.Staff;
+package people.staff;
 
 public class Pilot {
 }

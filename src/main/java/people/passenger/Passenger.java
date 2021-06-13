@@ -1,4 +1,4 @@
-package people.Passenger;
+package people.passenger;
 
 import people.Person;
 
