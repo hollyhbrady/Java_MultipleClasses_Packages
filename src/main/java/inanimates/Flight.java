@@ -91,7 +91,7 @@ public class Flight {
     }
 
     public String getPilotName() {
-        return pilot.getName();
+        return this.pilot.getName();
     }
 
     public PlaneType getPlaneType() {
@@ -104,5 +104,9 @@ public class Flight {
 
     public void addCrew(Staff staff) {
         this.cabinCrewList.add(staff);
+    }
+
+    public int returnAvailableSeats() {
+        return this.plane.getCapacityFromEnum() - this.countPassengers();
     }
 }

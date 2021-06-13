@@ -91,4 +91,11 @@ public class FlightTest {
         flight.addCrew(firstOfficer);
         assertEquals(4, flight.countCrew());
     }
+
+    @Test
+    public void canReturnAvailableSeats(){
+        flight.addPassenger(Nezuko);
+        flight.addPassenger(Tanjiro);
+        assertEquals(3, flight.returnAvailableSeats());
+    }
 }
