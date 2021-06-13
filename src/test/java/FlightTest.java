@@ -9,6 +9,7 @@ import people.staff.Pilot;
 import people.staff.Rank;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class FlightTest {
 
@@ -84,6 +85,17 @@ public class FlightTest {
     }
 
     @Test
+    public void flightCantAddPassengers(){
+        flight.addPassenger(Nezuko);
+        flight.addPassenger(Tanjiro);
+        flight.addPassenger(Zenitsu);
+        flight.addPassenger(Inosuke);
+        flight.addPassenger(Tomioka);
+        flight.addPassenger(Urokodaki);
+        assertEquals(5, flight.countPassengers());
+    }
+
+    @Test
     public void flightHasCrewList(){
         flight.addCrew(pilot);
         flight.addCrew(attendant1);
@@ -98,4 +110,5 @@ public class FlightTest {
         flight.addPassenger(Tanjiro);
         assertEquals(3, flight.returnAvailableSeats());
     }
+
 }

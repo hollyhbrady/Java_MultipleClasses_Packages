@@ -99,7 +99,9 @@ public class Flight {
     }
 
     public void addPassenger(Passenger passenger) {
-        this.passengerList.add(passenger);
+        if (this.plane.getCapacityFromEnum() > this.countPassengers()) {
+            this.passengerList.add(passenger);
+        }
     }
 
     public void addCrew(Staff staff) {
