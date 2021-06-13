@@ -16,4 +16,8 @@ public class Pilot extends Staff{
     public void setLicenseNo(String licenseNo) {
         this.licenseNo = licenseNo;
     }
+
+    public String flyPlane(){
+        return "We are flying";
+    }
 }
